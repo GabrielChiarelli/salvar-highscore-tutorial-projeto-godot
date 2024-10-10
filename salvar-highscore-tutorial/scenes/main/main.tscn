@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bololqqehlqcu"]
+
+[ext_resource type="Texture2D" uid="uid://in40ys5ij41i" path="res://assets/sprites/piso.png" id="1_bosw3"]
+[ext_resource type="PackedScene" uid="uid://bwdli7o5gahph" path="res://scenes/jogador/jogador.tscn" id="2_uan3w"]
+[ext_resource type="PackedScene" uid="uid://dchjuvqo1ia8n" path="res://scenes/pocao_azul/pocao_azul.tscn" id="3_51dju"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Piso" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_bosw3")
+centered = false
+
+[node name="Jogador" parent="." instance=ExtResource("2_uan3w")]
+position = Vector2(640, 340)
+
+[node name="Pocoes" type="Node2D" parent="."]
+
+[node name="PocaoAzul" parent="Pocoes" instance=ExtResource("3_51dju")]
+position = Vector2(240, 200)
+
+[node name="PocaoAzul2" parent="Pocoes" instance=ExtResource("3_51dju")]
+position = Vector2(480, 200)
+
+[node name="PocaoAzul3" parent="Pocoes" instance=ExtResource("3_51dju")]
+position = Vector2(700, 200)
+
+[node name="PocaoAzul4" parent="Pocoes" instance=ExtResource("3_51dju")]
+position = Vector2(920, 200)
